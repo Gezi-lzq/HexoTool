@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane opacity="0.87" prefHeight="697.0" prefWidth="390.0" style="-fx-background-color: #e1e3e6;">
+         <children>
+            <AnchorPane fx:id="dragPane" layoutX="77.0" layoutY="44.0" onDragDropped="#EventHandler" onDragOver="#DragOverEvent" opacity="0.61" prefHeight="225.0" prefWidth="236.0" style="-fx-background-color: #c8ccd1; -fx-background-radius: 25;">
+               <children>
+                  <ImageView fx:id="image" fitHeight="110.0" fitWidth="199.0" layoutX="19.0" layoutY="62.0" opacity="0.9" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@markdown.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <JFXBadge layoutX="157.0" layoutY="598.0" />
+            <JFXButton layoutX="133.0" layoutY="531.0" onAction="#Post" prefHeight="52.0" prefWidth="127.0" style="-fx-background-color: #576d93;" text="发布" textFill="#eeeeee">
+               <font>
+                  <Font name="Book Antiqua" size="23.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="blogName" alignment="CENTER_LEFT" layoutX="70.0" layoutY="286.0" prefHeight="41.0" prefWidth="251.0" promptText="文件名">
+               <font>
+                  <Font name="Microsoft YaHei" size="17.0" />
+               </font></JFXTextField>
+            <TextArea fx:id="categories" layoutX="90.0" layoutY="349.0" prefHeight="41.0" prefWidth="212.0" promptText="分类" />
+            <TextArea fx:id="tags" layoutX="90.0" layoutY="404.0" prefHeight="62.0" prefWidth="212.0" promptText="标签" />
+            <JFXTextField fx:id="postDate" layoutX="104.0" layoutY="476.0" promptText="发布时间" />
+            <Button layoutX="19.0" layoutY="595.0" mnemonicParsing="false" onAction="#Editpath" prefHeight="30.0" prefWidth="41.0" text="Edit">
+               <font>
+                  <Font size="12.0" />
+               </font></Button>
+            <JFXTextField fx:id="blogpath" layoutX="91.0" layoutY="595.0" prefHeight="30.0" prefWidth="212.0" text="F:\My\Blog" />
+            <ProgressBar fx:id="pbar" layoutX="98.0" layoutY="642.0" opacity="0.87" prefHeight="30.0" prefWidth="199.0" progress="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
